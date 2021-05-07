@@ -8,9 +8,9 @@
 | 1.4 About this Course                        | 2021/5/6 |
 | Quiz                                         | 2021/5/6 |
 
+&nbsp;
 
-
-| 2 Basics of Neural Network programming       | Date     |
+| 2 Basics of Neural Network programming &nbsp;| Date     |
 | -------------------------------------------- | -------- |
 | 2.1 Binary Classification                    | 2021/5/6 |
 | 2.2 Logistic Regression                      | 2021/5/6 |
