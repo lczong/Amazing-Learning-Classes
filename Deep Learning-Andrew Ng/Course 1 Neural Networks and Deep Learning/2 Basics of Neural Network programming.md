@@ -6,7 +6,7 @@
 
 ## Logistic Regression
 
-<img src="./images/logistic-regression.png" alt="Logistic Regression" style="zoom:50%;" />
+<img src="./images/logistic-regression.png" alt="Logistic Regression" style="width:500px;" />
 
 给定输入 $\vec{x}\in\mathbb{R}^{n_x}$，想要预测得到$\hat{y}=P(y=1|\vec{x})$
 
