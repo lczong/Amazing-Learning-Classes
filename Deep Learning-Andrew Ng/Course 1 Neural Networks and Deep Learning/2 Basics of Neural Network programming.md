@@ -5,8 +5,9 @@
 # 2 Basics of Neural Network programming
 
 ## Logistic Regression
-
-<img src="./images/logistic-regression.png" alt="Logistic Regression" width=500 />
+<div align=center>
+<img src="./images/logistic-regression.png" alt="Logistic Regression" width=600 />
+</div>
 
 给定输入 $\vec{x}\in\mathbb{R}^{n_x}$，想要预测得到$\hat{y}=P(y=1|\vec{x})$
 
