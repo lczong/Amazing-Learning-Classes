@@ -22,8 +22,9 @@ $$
 
 
 ## Logistic Regression Cost Function
-
-<img src="./images/logistic-regression-cost-function.png" alt="Logistic Regression Cost Function" style="width:500px;" />
+<div align=center>
+<img src="./images/logistic-regression-cost-function.png" alt="Logistic Regression Cost Function" width=600 />
+</div>
 
 Loss function是单个的
 
@@ -34,10 +35,12 @@ Cost function是加起来求和
 
 
 ## Gradient Descent
-
-<img src="./images/gradient-descent-1.png" alt="Gradient Descent 1" style="width:500px;" />
-
-<img src="./images/gradient-descent-2.png" alt="Gradient Descent 1" style="width:500px;" />
+<div align=center>
+<img src="./images/gradient-descent-1.png" alt="Gradient Descent 1" width=600 />
+</div>
+<div align=center>
+<img src="./images/gradient-descent-2.png" alt="Gradient Descent 1" width=600 />
+</div>
 $$
 w := w-\alpha\frac{\partial J(w,b)}{\partial w} \\
 b := w-\alpha\frac{\partial J(w,b)}{\partial b}
@@ -52,10 +55,12 @@ $$
 
 
 ## Logistic Regression Gradient Descent
-
-<img src="./images/logistic-regression-derivatives-1.png" alt="Logistic Regression Derivatives 1" style="width:500px;" />
-
-<img src="./images/logistic-regression-derivatives-2.png" alt="Logistic Regression Derivatives 2" style="width:500px;" />
+<div align=center>
+<img src="./images/logistic-regression-derivatives-1.png" alt="Logistic Regression Derivatives 1" width=600 />
+</div>
+<div align=center>
+<img src="./images/logistic-regression-derivatives-2.png" alt="Logistic Regression Derivatives 2" width=600 />
+</div>
 $$
 da=\frac{\partial{J}}{\partial{a}}=-\frac{y}{a}+\frac{1-y}{1-a} \\
 \frac{\partial{a}}{\partial{z}}=\frac{e^{-z}}{(1+e^{-z})^2}=a(1-a) \\
@@ -71,10 +76,12 @@ dw_2=x_2dz=x_2(a-y) \\
 db=dz=a-y
 $$
 当有 m 个Examples时
-
-<img src="./images/logistic-regression-on-m-examples-1.png" alt="Logistic Regression on m Examples 1" style="zoom:50%;" />
-
-<img src="./images/logistic-regression-on-m-examples-2.png" alt="Logistic Regression on m Examples 2" style="zoom:50%;" />
+<div align=center>
+<img src="./images/logistic-regression-on-m-examples-1.png" alt="Logistic Regression on m Examples 1" width=600 />
+</div>
+<div align=center>
+<img src="./images/logistic-regression-on-m-examples-2.png" alt="Logistic Regression on m Examples 2" width=600 />
+</div>
 
 m个Examples时，每次计算就是对每个样本$x^i$求得得$dw$求和，最后取平均算出最终的$dw$，然后开始迭代$w$
 
