@@ -2,7 +2,9 @@
 
 * Why deep learning taking off?
 
-![why taking off](./images/why-taking-off.png)
+<div align=center>
+<img src="./images/why-taking-off.png" alt="Why Deep Learning Taking Off" width=600 />
+</div>
 
 网络更大，数据量更大，都会使得Performance更好
 
