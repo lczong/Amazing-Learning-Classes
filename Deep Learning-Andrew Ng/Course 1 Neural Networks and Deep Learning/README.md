@@ -24,5 +24,7 @@
 | 2.10 Gradient Descent on m Examples          | 2021/5/7  | 2021/5/7  |
 | 2.11 Vectorization                           | 2021/5/10 |  |
 | 2.12 More Vectorization examples             | 2021/5/10 |  |
+| 2.13 Vectorizing Logistic Regression         | 2021/5/11 |  |
+| 2.14 Vectorizing Logistic Regression's Gradient Output | 2021/5/13 | |
 
 
