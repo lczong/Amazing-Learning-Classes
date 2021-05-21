@@ -210,3 +210,17 @@ Vectorizing方法充分利用到了Python的NumPy中的Broadcasting特性
 <img src="./images/broadcasting-in-python.png" alt="vectorizing-gradient" width=600 />
 </div>
 
+### 2.2.5 A Note on Python/Numpy Vectors
+使用NumPy编程时，不要使用“rank 1 array”
+``` python
+a = np.random.randn(5)
+```
+这样得到的array既不是行向量也不是列向量，形状是`a.shape=(5,)`，如果对其转置，形状不变，这样往往会造成问题，因此应该使用严格的行向量或列向量
+``` python
+a = np.random.randn(5, 1) # column vector
+a = np.random.randn(1, 5) # row vector
+```
+<div align=center>
+<img src="./images/python-numpy-vectors.png" alt="python-numpy-vectors" width=600 />
+</div>
+
