@@ -37,13 +37,34 @@ $$
 L(\hat{y},y)=-(ylog\hat{y}+(1-y)log(1-\hat{y}))
 $$
 
+> **解释**
+> 使用这个Lost Function的原因如下：
+> 想要使得 $\hat{y}$ 尽可能接近 $y$ ，也就是说：
+> $y=1$ 时，希望 $\hat{y}$ 尽可能接近 $1$ ，此时 $\hat{y}=P(y=1|x)$
+> $y=0$ 时，希望 $\hat{y}$ 尽可能接近 $0$ ，此时 $\hat{y}=P(y=1|x)=1-P(y=0|x)$
+> 即：
+> $ if \ y=1, P(y|x)=P(y=1|x)=\hat{y} $ ，希望 $\hat{y}$ 大，就是希望 $P(y|x)$ 大，
+> $ if \ y=0, P(y|x)=P(y=0|x)=1-P(y=1|x)=1-\hat{y} $ ，希望 $\hat{y}$ 小，同样是希望 $P(y|x)$ 大
+> 因此，无论 $y$ 如何，都希望 $P(y|x)$ 大
+> $P(y|x)$ 可以写成 $P(y|x)=\hat{y}^y(1-\hat{y})^{(1-y)}$
+> 加上 $log$ ，
+> $logP(y|x)=ylog\hat{y}+(1-y)log(1-\hat{y})$
+> 要使得Lost Function尽可能小，也就是使得 $logP(y|x)$尽可能大，所以：
+> $$L(\hat{y},y)=-(ylog\hat{y}+(1-y)log(1-\hat{y}))$$
+
 Loss Function是针对单个的输入预测得到的 $\hat{y}$ 计算，当有 $m$ 个样本时，将每个样本的Loss Function值求和就是Cost Function
 
 $$
 J(w,b)=\frac{1}{m}\sum^m_{i=1}L(\hat{y}^i,y^i)
 $$
 
-
+> **解释**
+> 这样计算Cost Function的原因如下：
+> 假设所有的样本都是独立同分布的，并且， $y^{(i)}$ 只依赖 $x^{(i)}$ 的值，根据极大似然估计，
+> $P(y^{(1)},y^{(2)},...,y^{(m)}|x^{(1)},x^{(2)},...,x^{(m)})=\prod^m_{i=1}P(y^{(i)}|x^{(i)})$
+> $logP=log\prod^m_{i=1}P(y^{(i)}|x^{(i)})=\sum^m_{i=1}logP(y^{(i)}|x^{(i)})=\sum^m_{i=1}L(\hat{y}^i,y^i)$ 
+> 归一化，得到：
+> $$J(w,b)=\frac{1}{m}\sum^m_{i=1}L(\hat{y}^i,y^i)$$ 
 
 ### 2.1.3 Gradient Descent
 <div align=center>
@@ -135,10 +156,12 @@ Vectorization，也就是向量化，实际上是并行计算向量的运算，�
 
 将这种向量化方法应用到Logistic Regression中
 
-对于外层的 $m$ 个Examples循环计算Logistic Regression，可以合并为一个矩阵，每个 $x^i$ 合并成大小为 $n_x * m$ 的矩阵 $\matrix{X}$ ，$\matrix{z}$ 计算如下：
+对于外层的 $m$ 个Examples循环计算Logistic Regression，可以合并为一个矩阵，每个 $x^i$ 合并成大小为 $n_x * m$ 的矩阵 $X$ ，$z$ 计算如下：
+
 $$
-Z=w^T\matrix{X}+\vec{b}
+Z=w^TX+\vec{b}
 $$
+
 这里的 $\vec{b}$ 是 $1 * m$ 的 $b$ 的组合
 
 实现的伪代码如下：
@@ -183,8 +206,7 @@ Vectorizing方法充分利用到了Python的NumPy中的Broadcasting特性
 
 当矩阵 $+ - * /$ 一个实数时，实数会自动扩充成和矩阵同样的大小进行运算
 
-<div align=center>
-
-<img src="./images/broadcasting-in-python.png" alt="broadcasting-in-python" width=600 />
-
+<div align=center>
+<img src="./images/broadcasting-in-python.png" alt="vectorizing-gradient" width=600 />
 </div>
+
