@@ -172,3 +172,19 @@ b = b - alpha * db
 ```
 
 对于最外层的梯度下降迭代的循环，不能使用向量化了，只能显式地循环迭代
+
+
+
+### 2.2.4 Broadcasting in Python
+
+Vectorizing方法充分利用到了Python的NumPy中的Broadcasting特性
+
+当矩阵 $+ - * /$ 一个向量时，向量会自动扩充到和矩阵同样的大小进行运算，前提是向量的一个维度与矩阵相同
+
+当矩阵 $+ - * /$ 一个实数时，实数会自动扩充成和矩阵同样的大小进行运算
+
+<div align=center>
+
+<img src="./images/broadcasting-in-python.png" alt="broadcasting-in-python" width=600 />
+
+</div>
