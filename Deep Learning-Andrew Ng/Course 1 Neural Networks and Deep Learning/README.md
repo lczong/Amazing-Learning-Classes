@@ -44,3 +44,4 @@
 | Programming              | Date |
 | -------------------------------------------- | ------ |
 | 1 Python Basics with Numpy   | ![2021/5/21](https://img.shields.io/badge/Passed-May%2021%202021-brightgreen) |
+| 2 Logistic Regression with a Neural Network mindset   | ![2021/5/22](https://img.shields.io/badge/Passed-May%2022%202021-brightgreen) |
