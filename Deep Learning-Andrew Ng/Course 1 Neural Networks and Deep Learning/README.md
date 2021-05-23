@@ -39,13 +39,13 @@
 | 3.2 Neural Network Representation | ![2021/5/22](https://img.shields.io/badge/Done-May%2022%202021-brightgreen)    | ![2021/5/22](https://img.shields.io/badge/Updated-May%2022%202021-brightgreen) |
 | 3.3 Computing a Neural Network's Output | ![2021/5/22](https://img.shields.io/badge/Done-May%2022%202021-brightgreen)    | ![2021/5/22](https://img.shields.io/badge/Updated-May%2022%202021-brightgreen) |
 | 3.4 Vectorizing Across Multiple Examples | ![2021/5/22](https://img.shields.io/badge/Done-May%2022%202021-brightgreen)    | ![2021/5/22](https://img.shields.io/badge/Updated-May%2022%202021-brightgreen) |
-| 3.5 Explanation for Vectorized Implementation |  |  |
-| 3.6 Activation Functions |  |  |
-| 3.7 Why need Non-Linear Activation Functions |  |  |
-| 3.8 Derivatives of Activation Functions |  |  |
-| 3.9 Gradient Descent for Neural Networks |  |  |
-| 3.10 Backpropagation Intuition |  |  |
-| 3.11 Random Initialization |  |  |
+| 3.5 Explanation for Vectorized Implementation | ![2021/5/23](https://img.shields.io/badge/Done-May%2023%202021-brightgreen)  | ![2021/5/23](https://img.shields.io/badge/Updated-May%2023%202021-brightgreen) |
+| 3.6 Activation Functions | ![2021/5/23](https://img.shields.io/badge/Done-May%2023%202021-brightgreen) | ![2021/5/23](https://img.shields.io/badge/Updated-May%2023%202021-brightgreen) |
+| 3.7 Why need Non-Linear Activation Functions | ![2021/5/23](https://img.shields.io/badge/Done-May%2023%202021-brightgreen) | ![2021/5/23](https://img.shields.io/badge/Updated-May%2023%202021-brightgreen) |
+| 3.8 Derivatives of Activation Functions | ![2021/5/23](https://img.shields.io/badge/Done-May%2023%202021-brightgreen) | ![2021/5/23](https://img.shields.io/badge/Updated-May%2023%202021-brightgreen) |
+| 3.9 Gradient Descent for Neural Networks | ![2021/5/23](https://img.shields.io/badge/Done-May%2023%202021-brightgreen) |  |
+| 3.10 Backpropagation Intuition | ![2021/5/23](https://img.shields.io/badge/Done-May%2023%202021-brightgreen) |  |
+| 3.11 Random Initialization | ![2021/5/23](https://img.shields.io/badge/Done-May%2023%202021-brightgreen) |  |
 
 &nbsp;
 
