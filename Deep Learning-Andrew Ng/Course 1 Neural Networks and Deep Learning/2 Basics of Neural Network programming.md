@@ -77,8 +77,10 @@ $$
 有了Cost Function之后，我们的目的就是让它最小，因此用到的方法就是梯度下降，让两个参数 $w$ 和 $b$，从初始化的位置，沿着梯度方向迭代，即：
 
 $$
-w := w-\alpha\frac{\partial J(w,b)}{\partial w} \\
-b := w-\alpha\frac{\partial J(w,b)}{\partial b}
+\begin{aligned}
+w&:= w-\alpha\frac{\partial J(w,b)}{\partial w} \\
+b&:= w-\alpha\frac{\partial J(w,b)}{\partial b}
+\end{aligned}
 $$
 
 ### 2.1.4 Computing Derivatives with a Computational Graph
@@ -101,20 +103,23 @@ $$
 把Logistic Regression的Loss Function带入到梯度下降计算公式中，来计算每一步的微分：
 
 $$
-da=\frac{\partial{J}}{\partial{a}}=-\frac{y}{a}+\frac{1-y}{1-a} \\
-\frac{\partial{a}}{\partial{z}}=\frac{e^{-z}}{(1+e^{-z})^2}=a(1-a) \\
-dz=\frac{\partial{J}}{\partial{z}}
-=\frac{\partial{J}}{\partial{a}}\frac{\partial{a}}{\partial{z}}
+\begin{aligned}
+da&=\frac{\partial{J}}{\partial{a}}=-\frac{y}{a}+\frac{1-y}{1-a} \\
+\frac{\partial{a}}{\partial{z}}&=\frac{e^{-z}}{(1+e^{-z})^2}=a(1-a) \\
+dz&=\frac{\partial{J}}{\partial{z}}=\frac{\partial{J}}{\partial{a}}\frac{\partial{a}}{\partial{z}}
 =(-\frac{y}{a}+\frac{1-y}{1-a})*a(1-a)=a-y \\
+\end{aligned}
 $$
 
 所以
 
 $$
-z=w_1x_1+w_2x_2+b \\
-dw_1=x_1dz=x_1(a-y) \\
-dw_2=x_2dz=x_2(a-y) \\
-db=dz=a-y
+\begin{aligned}
+z&=w_1x_1+w_2x_2+b \\
+dw_1&=x_1dz=x_1(a-y) \\
+dw_2&=x_2dz=x_2(a-y) \\
+db&=dz=a-y
+\end{aligned}
 $$
 
 当有 $m$ 个Examples时，根据Cost Function的定义，我们要对这 $m$ 个Examples的Loss Function求和，也就是Cost Funtion的各参数微分实际上是每个Example的各参数微分值求和得到
